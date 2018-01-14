@@ -4,237 +4,81 @@
     <meta charset="utf-8">
     <title>Colmar Academy</title>
     <link href="resources/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700|Ubuntu" rel="stylesheet">
+
     <link href="resources/css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
-    <!-- Header + navigation section -->
+    <!-- Header & Navigation section for pc -->
 
-    <header> <!-- flex/row -->
-      <div class="header-logo">
-        <img src="resources/images/ic-logo.svg"/>
-          <!-- Turn off for mobile -->
-        <span class="header school-name"><strong>COLMAR<strong>ACADEMY</span>
-
-          <!-- PC menu -->
-
-      <nav class"menu">
-        <a href="">On Campus</a>
-        <a href="">Online</a>
-        <a href="">Sponsor Companies</a>
-        <a href="">Sign in</a>
-      </nav>
-
-        <!-- Moblie Menu Additions - linked .svg elements -->
-
-      <nav class="mobile-image">
-        <a href="">
-          <img src="resources/images/ic-on-ccampus.svg" alt=""/>
-        </a>
-        <a href="">
-          <img  src="resources/images/ic-online.svg" alt=""/>
-        </a>
-        <a href="">
-          <img src="resources/images/ic-login.svg" alt=""/>
-        </a>
-      </nav>
-
+    <header class="pc"> <!-- flex/row -->
+      <div class="header">
+        <div class="logo">
+          <img src="resources/images/ic-logo.svg"/>
+          <span><strong>COLMAR</strong>ACADEMY</span>
+        </div>
+        <nav class="menu">
+          <a href="">On Campus</a>
+          <a href="">Online</a>
+          <a href="">Sponsor Companies</a>
+          <a href="">Sign in</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- 1st of 4 vertical sections -->
+    <!-- Moblie Menu - linked .svg elements -->
 
-    <div class="section1"> <!-- flex/row + specify flex-shrink on children -->
-      <img class="banner" src="resources/images/banner.jpg" alt="Students studying at a picnic table"/>
-      <div class="banner-info"> <!-- flex/column -->
-        <h1 class="banner">
-          Learn something new everyday
-        </h1>
-        <h3 class-"banner">
-          This school really knows how to party - don't miss it!
-        </h3>
-        <h5 class="banner=button">
-          <a href="">Start Here</a>
-        </h5>
-      </div>
-    </div>
+    <header class="mobile">
+      <nav class="mobile-menu">
+        <a href=""><img src="resources/images/ic-logo.svg" alt=""/></a>
+        <a href=""><img src="resources/images/ic-on-campus.svg" alt=""/></a>
+        <a href=""><img src="resources/images/ic-online.svg" alt=""/></a>
+        <a href=""><img src="resources/images/ic-login.svg" alt=""/></a>
+      </nav>
+    </header>
 
-    <!-- 2nd of 4 vertical sections -->
+    <div class="page-container">
 
-    <div class="section2">
-      <div class="2a"> <!-- flex/column -->
-        <img src="resources/images/information-main.jpg" alt="student reading a book outdoors in autumn like weather"/>
-        <h2>
-          It doesn't hurt to keep practicing
-        </h2>
-        <p class="summary">
-          While practicing doesn't gaurantee success, it certainly provides for a higher probability of victory than not practicing.  In addition, it makes for  a more satisfying learning experience as practice results in improved mastery of a given subject.  But for those who think positive, "practice makes perfect."
-        </p>
-        <h5>
-          Emanual, Sr. Strategist at Hiring.com
-        </h5>
-      </div>
-      <div class="2b"> <!-- flex-column -->
-        <div class="ensemble"> <!-- flex/row + specify shrink on children -->
-          <img
-            src="resources/images/information-orientation.jpg" alt="Elevated perspetive of students walking to class"/>
-          <div class="additional-info">
-            <h3>
-              Orientation date
-            </h3>
-            <h6>
-              Tue 10/11 & Wed 10/12: 8am-3pm
-            </h6>
-            <h6>
-              <a href="">Read more</a>
-            </h6>
-          </div>
+      <!-- 1st of 4 vertical sections -->
+
+      <div class="section-1"> <!-- flex/row -->
+        <div class="subsection-1a"> <!-- image container for margin consistency with sections below -->
+          <img src="resources/images/banner.jpg" alt="Students studying at a picnic table"/>
         </div>
-        <div class="ensemble"> <!-- flex/row + specify shrink on children -->
-          <img
-            src="resources/images/information-campus.jpg" alt="3 students seated beneath a map of South America while studying at a table in a well decorated study room"/>
-          <div class="additional-info">
-            <h3>
-              Our campus
-            </h3>
-            <h6>
-              Find which campus is close to you
-            </h6>
-            <h6>
-              <a href="">Read more</a>
-            </h6>
-          </div>
-        </div>
-        <div class="ensemble"> <!-- flex/row + specify shrink on children -->
-          <img
-            src="resources/images/information-guest-lecture.jpg" alt="Photo of Oliver Sack, the guest lecturer"/>
-          <div class="additional-info">
-            <h3>
-              Our guest lecture
-            </h3>
-            <h6>
-              Join a keynote with Oliver Sack about music in medical treatment
-            </h6>
-            <h6>
-              <a href="">Read more</a>
-            </h6>
-          </div>
-        </div>
+        <div class="subsection-1b"> <!-- flex/column -->
+          <h1>
+            Learn something new everyday
+          </h1>
+          <h3>
+            This school really knows how to party, real two-fisted drinking - don't miss out!!
+          </h3>
+          <h5>
+            <a href="">Start Here</a>
+          </h5>
         </div>
       </div>
 
-    <!-- 3rd of 4 vertical sections -->
+      <!-- 2nd of 4 vertical sections -->
 
-    <div class="section3"> <!-- flex/flex-column -->
-      <h2> <!-- Text justified center -->
-          Start learning
-      </h2>
-      <div class="collection"> <!-- flex/row wrap -->
-        <div class="ensemble"> <!-- flex/column -->
-          <img
-            src="resources/images/course-software.jpg" alt="Photo of 2 Apple desktop computers at a study table"/>
-          <h3>
-            Software engineering
-          </h3>
-          <h4>
-            Courses
-          </h4>
-          <h6>
-            Web Development, Mobile Development, iOT, APIs
-          </h6>
-        </div>
-        <div class="ensemble"> <!-- flex/column -->
-          <img
-            src="resources/images/course-computer-art.jpg" alt="Photo of cell phone in hand making a call from a campus coffee shop"/>
-          <h3>
-            Computer art
-          </h3>
-          <h4>
-            Courses
-          </h4>
-          <h6>
-            Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation
-          </h6>
-        </div>
-        <div class="ensemble"> <!-- flex/column -->
-          <img
-            src="resources/images/course-design.jpg" alt="A student holds a camera at waist level to take 'design' photo"/>
-          <h3>
-            Design
-          </h3>
-          <h4>
-            Courses
-          </h4>
-          <h6>
-            User Experience Design, User Research, Visual Design
-          </h6>
-        </div>
-        <div class="ensemble"> <!-- flex/column -->
-          <img
-            src="resources/images/course-data.jpg" alt="computer sitting alone at a study table displaying a data analysis graph"/>
-          <h3>
-            Data
-          </h3>
-          <h4>
-            Courses
-          </h4>
-          <h6>
-            Data Science, Big Data, SQL, Data Visualization
-          </h6>
-        </div>
-        <div class="ensemble"> <!-- flex/column -->
-          <img
-            src="resources/images/course-business.jpg" alt="Side photo of a chess board showing with stylized pieces"/>
-          <h3>
-            Business
-          </h3>
-          <h4>
-            Courses
-          </h4>
-          <h6>
-            Product Development, Business Development, Startup
-          </h6>
-        </div>
-        <div class="ensemble"> <!-- flex/column -->
-          <img src="resourcess/images/course-marketing.jpg" alt="Picture of a modern 'smart' watch on a students wrist while he operates it"/>
-          <h3>
-            Marketing
-          </h3>
-          <h4>
-            Courses
-          </h4>
-          <h6>
-            Analytics, Content Marketing, Mobile Marketing
-          </h6>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4th of 4 vertical sections -->
-
-    <div class="section4"> <!-- flex/column -->
-      <h2>
-        Thesis exhibit
-      </h2>
-      <div class="4a"> <!-- flex/row specify flex-shrink on children -->
-        <div class="4a"> <!-- flex/column -->
-          <video src="resources/videos/thesis.mp4">
-            Sorry, your browser doesn't support embedded videos,
-            but don't worry, you can <a href="">download it</a>
-            and watch it with your favorite video player!
-          </video>
-          <h3>
-            Reimagine urban
-          </h3>
+      <div class="section-2"> <!-- flex/row -->
+        <div class="subsection-2a"> <!-- flex/column -->
+          <img src="resources/images/information-main.jpg" alt="student reading a book outdoors in autumn like weather"/>
+          <h2>
+            It doesn't hurt to keep practicing
+          </h2>
           <p>
-            It gets me so excited when I try to translate latin.  It's not bad enough that I have to learn coding at age 57, but now I have to know latin to get through this.  AND, I have no idea what kind of font this is supposed to be?
+            While practicing doesn't gaurantee success, it certainly provides for a higher probability of victory than not.  In addition, it makes for  a more satisfying learning experience as practicing technique results in an improved mastery of any given subject.  But for those who think positive, "practice makes perfect."
           </p>
+          <h5>
+            Emanual, Sr. Strategist at Hiring.com
+          </h5>
         </div>
-      </div>
-      <div class="4b"> <!-- flex/column -->
-        <div class="collection">
+        <div class="subsection-2b"> <!-- flex-column -->
           <div class="ensemble"> <!-- flex/row + specify shrink on children -->
-            <img src="resources/images/thesis-fisma.jpg" alt="Overhead perspective of a students forearm sketching graphical material with a cell phone and computer adjacent"/>
-            <div class="additional-info">
+            <img
+              src="resources/images/information-orientation.jpg" alt="Elevated perspetive of students walking to class"/>
+            <div class="info">
               <h3>
                 Orientation date
               </h3>
@@ -247,17 +91,166 @@
             </div>
           </div>
           <div class="ensemble"> <!-- flex/row + specify shrink on children -->
-            <img src="resources/images/thesis-now-and-then.jpg" alt="Photo of New York city with the Empire State Building at its center"/>
-            <div class="additional-info">
+            <img
+              src="resources/images/information-campus.jpg" alt="3 students seated beneath a map of South America while studying at a table in a well decorated study room"/>
+            <div class="info"> <!-- flex-column -->
               <h3>
-                Orientation date
+                Our campus
               </h3>
               <h6>
-                Tue 10/11 & Wed 10/12: 8am-3pm
+                Find which campus is close to you
               </h6>
               <h6>
                 <a href="">Read more</a>
               </h6>
+            </div>
+          </div>
+          <div class="ensemble gray"> <!-- flex/row + specify shrink on children -->
+            <img
+              src="resources/images/information-guest-lecture.jpg" alt="Photo of Oliver Sack, the guest lecturer"/>
+            <div class="info">
+              <h3>
+                Our guest lecture
+              </h3>
+              <h6>
+                Join a keynote with Oliver Sack about music in medical treatment
+              </h6>
+              <h6>
+                <a href="">Read more</a>
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3rd of 4 vertical sections -->
+
+      <div class="section-3"> <!-- flex/flex-column -->
+        <h2> <!-- Text justified center -->
+            Start Learning
+        </h2>
+        <div class="collection"> <!-- flex/row wrap -->
+
+          <div class="study-areas"> <!-- flex/column -->
+            <img
+              src="resources/images/course-software.jpg" alt="Photo of 2 Apple desktop computers at a study table"/>
+            <h3>
+              Software Engineering
+            </h3>
+            <h4>
+              Courses
+            </h4>
+            <h6>
+              Web Development, Mobile Development, iOT, APIs
+            </h6>
+          </div>
+          <div class="study-areas"> <!-- flex/column -->
+            <img
+              src="resources/images/course-computer-art.jpg" alt="Photo of cell phone in hand making a call from a campus coffee shop"/>
+            <h3>
+              Computer Art
+            </h3>
+            <h4>
+              Courses
+            </h4>
+            <h6>
+              Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation
+            </h6>
+          </div>
+          <div class="study-areas"> <!-- flex/column -->
+            <img
+              src="resources/images/course-design.jpg" alt="A student holds a camera at waist level to take 'design' photo"/>
+            <h3>
+              Design
+            </h3>
+            <h4>
+              Courses
+            </h4>
+            <h6>
+              User Experience Design, User Research, Visual Design
+            </h6>
+          </div>
+          <div class="study-areas"> <!-- flex/column -->
+            <img
+              src="resources/images/course-data.jpg" alt="computer sitting alone at a study table displaying a data analysis graph"/>
+            <h3>
+              Data
+            </h3>
+            <h4>
+              Courses
+            </h4>
+            <h6>
+              Data Science, Big Data, SQL, Data Visualization
+            </h6>
+          </div>
+          <div class="study-areas"> <!-- flex/column -->
+            <img
+              src="resources/images/course-business.jpg" alt="Side photo of a chess board showing with stylized pieces"/>
+            <h3>
+              Business
+            </h3>
+            <h4>
+              Courses
+            </h4>
+            <h6>
+              Product Development, Business Development, Startup
+            </h6>
+          </div>
+          <div class="study-areas"> <!-- flex/column -->
+            <img src="resources/images/course-marketing.jpg" alt="Picture of a modern 'smart' watch on a students wrist while he operates it"/>
+            <h3>
+              Marketing
+            </h3>
+            <h4>
+              Courses
+            </h4>
+            <h6>
+              Analytics, Content Marketing, Mobile Marketing
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4th of 4 vertical sections -->
+
+      <div class="section-4"> <!-- flex/column -->
+        <h2>
+          Thesis exhibit
+        </h2>
+        <div class="subsection-summary">
+          <div class="subsection-4a"> <!-- flex/column -->
+            <video class="modern" autoplay loop>
+                <source src="resources/videos/thesis.mp4" type="video/mp4">
+            </video>
+            <h2>
+              Reimagine urban
+            </h2>
+            <p>
+              It gets me so excited when I try to translate latin.  It's not bad enough that I have to learn coding at age 57, but now I have to know latin to get through this.  AND, I have no idea what kind of font this is supposed to be?
+            </p>
+          </div>
+          <div class="subsection-4b"> <!-- flex/column -->
+            <div class="ensemble gray"> <!-- flex/row + specify shrink on children -->
+              <img src="resources/images/thesis-fisma.jpg" alt="Overhead perspective of a students forearm sketching graphical material with a cell phone and computer adjacent"/>
+              <div class="info">
+                <h3>
+                  Fisma: Design and Prototype
+                </h3>
+                <h6>
+                  Designer showcase of a new prototype product
+                </h6>
+              </div>
+            </div>
+            <div class="ensemble"> <!-- flex/row -->
+              <img src="resources/images/thesis-now-and-then.jpg" lt="Photo of New York city with the Empire State Building at its center"/>
+              <div class="info">
+                <h3>
+                  Now and then
+                </h3>
+                <h6>
+                  Research study about New York
+                </h6>
+              </div>
             </div>
           </div>
         </div>
@@ -267,15 +260,19 @@
     <!-- Footer section -->
 
     <footer> <!-- flex/row -->
-      <span class="copyright>
-        &copy; 2016 Colmar Academy. All rights reserved
-      </span>
-      <span class="disclaimers">
-        <a href="">Terms</a>
-      </span>
-      <span class="disclaimers">&nbsp;&nbsp;
-        <a href="">Privacy</a>
-      </span>
+      <div class="company">
+        <span class="copyright">
+          &copy; 2016 Colmar Academy. All rights reserved
+        </span>
+      </div>
+      <div class="terms">
+        <span class="disclaimers">
+          <a href="">Terms</a>
+        </span>
+        <span class="disclaimers">&nbsp;&nbsp;
+          <a href="">Privacy</a>
+        </span>
+      </div>
     </footer>
 
   </body>
