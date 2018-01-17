@@ -1,20 +1,18 @@
-/** base-font and font-color **/
+/** base-font, font-size and font-color **/
 
 body {
   font-size:16px;
   font-family: 'Ubuntu', sans-serif;
+  color: rgb(56,56,56);
 }
 
-/** header & navigation section **/
-
-header {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
+header.mobile {
+  display: none;
 }
 
-.header {
+/** PC header & navigation section **/
+
+header.pc {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -67,25 +65,20 @@ span strong {
   font-size: 1.3rem;
 }
 
-header.mobile {
-  display: none;
-}
+/** The page container encompasses vertical sections 1 through 4 **/
 
-/** body defaults **/
-
-.page-container {
+div.page-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   height: auto;
-  width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  color: rgb(56,56,56);
 }
 
-/** 1st vertical section **/
+/** Section 1 **/
 
 .section-1 {
   display: flex;
@@ -107,7 +100,7 @@ header.mobile {
   max-width: 60%;
   height: auto;
   margin: 0;
-  padding: 2rem 1.5rem 2rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .subsection-1a img {
@@ -120,7 +113,7 @@ header.mobile {
 .subsection-1b {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 40%;
   height: auto;
@@ -130,13 +123,13 @@ header.mobile {
 
 .subsection-1b h1 {
   font-weight: 800;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   padding: 0;
   font-size: 3rem;
 }
 
 .subsection-1b h3 {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   padding: 0;
   font-size: 1.5rem;
 }
@@ -144,7 +137,7 @@ header.mobile {
 .subsection-1b h5 {
   color: white;
   background-color: rgb(56,56,56);
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   padding: .5rem 6rem;
   font-size: 1.1rem;
   font-weight: 300;
@@ -155,8 +148,9 @@ header.mobile {
   text-decoration: none;
 }
 
-/** 2nd vertical section **/
-  /** .subsection-summary (below) is section-4 tag refactored **/
+/** Section 2 **/
+
+  /** Section 4 '.subsection-summary' is refactored into '.section-2' **/
 
 .section-2, .subsection-summary {
   display: flex;
@@ -169,7 +163,7 @@ header.mobile {
   padding: 0;
 }
 
-/** subsection-4a (below) is equivalent section-4 tag refactored **/
+/** '.subsection-4a' (below) is equivalent is refactored into '.subsection-2a' **/
 
 .subsection-2a, .subsection-4a {
   display: flex;
@@ -178,15 +172,16 @@ header.mobile {
   align-items: flex-start;
   height: auto;
   max-width: 60%;
+  margin: 0;
 }
 
+/** '.subsections-2a' and -4a require different padding **/
+
 .subsection-2a {
-  margin: 0;
   padding: 2rem 1.5rem;
 }
 
 .subsection-4a {
-  margin: 0;
   padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
@@ -216,7 +211,7 @@ margin: 0;
   margin: 2.3rem 0 0 0;
 }
 
-/** .subsection-4b is refactored using .subsection-2b properties **/
+/** '.subsection-4b' is refactored into '.subsection-2b' **/
 
 .subsection-2b, .subsection-4b {
   display: flex;
@@ -240,7 +235,7 @@ margin: 0;
   padding: 1rem;
 }
 
-.ensemble.gray {
+#bottom.ensemble {
   background-color: rgb(220, 220, 220);
 }
 
@@ -251,9 +246,11 @@ margin: 0;
   padding: 0;
 }
 
-/** this incorporates identical tags from .section-4b,
-with the exception of: "".info h6 a" as there is no
-hyperlind in section-4 ensemble collection **/
+img.mobile-2b {
+  display: none;
+}
+
+/** With the exception of link tags this is identical to tags from .section-4b and distinguishable only by this note. **/
 
 .ensemble.info {
   display: flex;
@@ -290,7 +287,13 @@ hyperlind in section-4 ensemble collection **/
   text-decoration: none;
 }
 
-/** 3rd vertical section **/
+/** Section 3 **/
+
+div.section-3-m {
+  display: none;
+}
+
+/** '.section-4' refactored into '.section-3' **/
 
 .section-3, .section-4 {
   display: flex;
@@ -300,8 +303,11 @@ hyperlind in section-4 ensemble collection **/
   height: auto;
   width: 100%;
   margin: 0;
-  padding: 0 0 1rem 0;
+  padding: 0;
 }
+
+/** .section-3 has unique 'background-color' **/
+
 .section-3 {
   background-color: rgb(220, 220, 220);
 }
@@ -364,7 +370,7 @@ hyperlind in section-4 ensemble collection **/
   padding: 0;
 }
 
-/** 4th vertical section **/
+/** Section 4 **/
 
 /** .section-4, section-4 h2, refactored to section-3 **/
 
@@ -372,7 +378,9 @@ hyperlind in section-4 ensemble collection **/
 
 /** .subsection-4a is refactored into .subsection-2a **/
 
-/** .subsection-4a text is refactored in subsection-2a equivalent text **/
+/** .subsection-4a text is refactored into subsection-2a equivalent text **/
+
+/** .subsection-4b is refactored into .subsection-2b **/
 
 video.modern {
   width: 100%;
@@ -403,15 +411,286 @@ footer {
   align-items: flex-start;
   max-width: 100%;
   height: auto;
-  margin: 0 0 2rem;
+  margin: 0;
   padding: 1rem 1.5rem;
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 300;
-  border-top: 2px rgb(56,56,56) solid;
+  opacity: .85;
 }
 
-.disclaimer a:link, disclaimer a:visited, disclaimer a:active {
+.terms a:link, .terms a:visited, .terms a:active {
   color: rgb(56,56,56);
-  opacity: .9;
   text-decoration: none;
+}
+
+/** Header media queries **/
+
+@media only screen and (max-width: 700px) {
+
+  header.pc {
+    display: none;
+  }
+
+  header.mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.mobile-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-menu img {
+    width: auto;
+    height: 2rem;
+  }
+
+}
+
+/** Section 1 media queries **/
+
+@media only screen and (max-width: 700px) {
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(220, 220, 220);
+  }
+
+  .subsection-1a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .subsection-1b {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0m;
+  }
+
+  .subsection-1b h1 {
+    font-weight: 800;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    font-size: 3rem;
+  }
+
+  .subsection-1b h3 {
+    margin: 0 0 1.5rem 0;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  div.text-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 0 2rem 0;
+    padding: 0;
+  }
+
+  .subsection-1b h5 {
+    color: white;
+    background-color: rgb(56,56,56);
+    margin: 0;
+    padding: .5rem 6rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+}
+
+/** Section 2 media queries **/
+
+@media only screen and (max-width: 700px) {
+
+  .subsection-2a {
+    display: none;
+  }
+
+  img.pc-2b {
+    display: none;
+  }
+
+  .section-2 {
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .subsection-2b {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0 2rem 0;
+  }
+
+  .ensemble {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding:0 1rem;
+  }
+
+  #top.ensemble {
+    margin: 0 0 2rem 0;
+  }
+
+  #middle.ensemble {
+    margin: 0 0 2rem 0;
+  }
+
+  #bottom.ensemble {
+    background-color: white;
+  }
+
+  img.mobile-2b {
+    display: inline;
+    width: 100%;
+    height: auto;
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+
+}
+
+/** Section 3 media queries **/
+
+@media only screen and (max-width: 700px) {
+
+  div.section-3 {
+    display: none;
+  }
+
+  div.section-3-m {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-3-m h2 {
+    font-size: 2.5rem;
+    margin: 2rem 0 .5rem 0;
+    padding: 0;
+  }
+
+  .study-areas-m {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    margin: .5rem 0;
+    padding:0;
+    background-color: rgb(220, 220, 220);
+  }
+
+  .study-areas-m h3 {
+    width: 35rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 1rem 0 1.5rem 1rem;
+  }
+
+  div.expander {
+    width: 15px;
+  }
+
+}
+
+/** Section 4 media queries **/
+
+@media only screen and (max-width: 700px) {
+
+  .subsection-4b {
+    display: none;
+  }
+
+  .subsection-4a h2, .subsection-4a p {
+    display: none;
+  }
+
+  .subsection-summary {
+    margin: 0 0 1.5rem 0;
+  }
+
+  .subsection-4a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+/** Footer media queries **/
+
+@media only screen and (max-width: 700px) {
+
+  span.terms {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-start;
+  }
+
 }

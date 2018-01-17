@@ -3,31 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Colmar Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="resources/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700|Ubuntu" rel="stylesheet">
-
     <link href="resources/css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
-    <!-- Header & Navigation section for pc -->
+    <!-- PC Header & Navigation -->
 
     <header class="pc"> <!-- flex/row -->
-      <div class="header">
-        <div class="logo">
-          <img src="resources/images/ic-logo.svg"/>
-          <span><strong>COLMAR</strong>ACADEMY</span>
-        </div>
-        <nav class="menu">
-          <a href="">On Campus</a>
-          <a href="">Online</a>
-          <a href="">Sponsor Companies</a>
-          <a href="">Sign in</a>
-        </nav>
+      <div class="logo">
+        <img src="resources/images/ic-logo.svg"/>
+        <span><strong>COLMAR</strong>ACADEMY</span>
       </div>
+      <nav class="menu">
+        <a href="">On Campus</a>
+        <a href="">Online</a>
+        <a href="">Sponsor Companies</a>
+        <a href="">Sign in</a>
+      </nav>
     </header>
 
-    <!-- Moblie Menu - linked .svg elements -->
+    <!-- Moblie Header and Navigation -->
 
     <header class="mobile">
       <nav class="mobile-menu">
@@ -53,16 +51,18 @@
           <h3>
             This school really knows how to party, real two-fisted drinking - don't miss out!!
           </h3>
-          <h5>
-            <a href="">Start Here</a>
-          </h5>
+          <div class="text-center">
+            <h5>
+              <a href="">Start Here</a>
+            </h5>
+          </div>
         </div>
       </div>
 
       <!-- 2nd of 4 vertical sections -->
 
-      <div class="section-2"> <!-- flex/row -->
-        <div class="subsection-2a"> <!-- flex/column -->
+      <div class="section-2">
+        <div class="subsection-2a"> 
           <img src="resources/images/information-main.jpg" alt="student reading a book outdoors in autumn like weather"/>
           <h2>
             It doesn't hurt to keep practicing
@@ -74,10 +74,12 @@
             Emanual, Sr. Strategist at Hiring.com
           </h5>
         </div>
-        <div class="subsection-2b"> <!-- flex-column -->
-          <div class="ensemble"> <!-- flex/row + specify shrink on children -->
-            <img
+        <div class="subsection-2b">
+          <div id="top" class="ensemble">
+            <img class="pc-2b"
               src="resources/images/information-orientation.jpg" alt="Elevated perspetive of students walking to class"/>
+            <img class="mobile-2b"
+              src="resources/images/information-orientation-mobile.jpg" alt="Elevated perspetive of students walking to class"/>
             <div class="info">
               <h3>
                 Orientation date
@@ -90,10 +92,11 @@
               </h6>
             </div>
           </div>
-          <div class="ensemble"> <!-- flex/row + specify shrink on children -->
-            <img
+          <div id="middle" class="ensemble">             <img class="pc-2b"
               src="resources/images/information-campus.jpg" alt="3 students seated beneath a map of South America while studying at a table in a well decorated study room"/>
-            <div class="info"> <!-- flex-column -->
+            <img class= "mobile-2b"
+              src="resources/images/information-campus-mobile.jpg" alt="3 students seated beneath a map of South America while studying at a table in a well decorated study room"/>
+            <div class="info">
               <h3>
                 Our campus
               </h3>
@@ -105,9 +108,11 @@
               </h6>
             </div>
           </div>
-          <div class="ensemble gray"> <!-- flex/row + specify shrink on children -->
-            <img
+        <div id="bottom" class="ensemble">
+            <img class="pc-2b"
               src="resources/images/information-guest-lecture.jpg" alt="Photo of Oliver Sack, the guest lecturer"/>
+            <img class="mobile-2b"
+              src="resources/images/information-guest-lecture-mobile.jpg" alt="Photo of Oliver Sack, the guest lecturer"/>
             <div class="info">
               <h3>
                 Our guest lecture
@@ -129,8 +134,8 @@
         <h2> <!-- Text justified center -->
             Start Learning
         </h2>
-        <div class="collection"> <!-- flex/row wrap -->
 
+        <div class="collection">
           <div class="study-areas"> <!-- flex/column -->
             <img
               src="resources/images/course-software.jpg" alt="Photo of 2 Apple desktop computers at a study table"/>
@@ -211,6 +216,63 @@
         </div>
       </div>
 
+      <!-- Mobile section 3 -->
+
+      <div class="section-3-m"> <!-- flex/flex-column -->
+
+        <h2> <!-- Text justified center -->
+            Start Learning
+        </h2>
+        <div class="study-areas-m"> <!-- flex/column -->
+          <h3>
+            Software Engineering
+          </h3>
+          <div class="expander">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="study-areas-m"> <!-- flex/column -->
+          <h3>
+            Computer Art
+          </h3>
+          <div class="expander">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="study-areas-m"> <!-- flex/column -->
+          <h3>
+            Design
+          </h3>
+          <div class="expander">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="study-areas-m"> <!-- flex/column -->
+          <h3>
+            Data
+          </h3>
+          <div class="expander">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="study-areas-m"> <!-- flex/column -->
+          <h3>
+            Business
+          </h3>
+          <div class="expander">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="study-areas-m">
+          <h3>
+            Marketing
+          </h3>
+          <div class="expander">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+      </div>
+
       <!-- 4th of 4 vertical sections -->
 
       <div class="section-4"> <!-- flex/column -->
@@ -260,16 +322,14 @@
     <!-- Footer section -->
 
     <footer> <!-- flex/row -->
-      <div class="company">
-        <span class="copyright">
-          &copy; 2016 Colmar Academy. All rights reserved
+      <span class="copyright">
+        &copy; 2016 Colmar Academy. All rights reserved
+      </span>
+      <div class="footer">
+        <span class="terms">
+          <a href="">Terms</a>&nbsp; &nbsp;
         </span>
-      </div>
-      <div class="terms">
-        <span class="disclaimers">
-          <a href="">Terms</a>
-        </span>
-        <span class="disclaimers">&nbsp;&nbsp;
+        <span class="terms">
           <a href="">Privacy</a>
         </span>
       </div>
