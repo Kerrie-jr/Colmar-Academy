@@ -6,11 +6,11 @@ body {
   color: rgb(56,56,56);
 }
 
+/** PC header & navigation section **/
+
 header.mobile {
   display: none;
 }
-
-/** PC header & navigation section **/
 
 header.pc {
   display: flex;
@@ -460,7 +460,26 @@ footer {
 
 }
 
-/** Section 1 media queries **/
+/** Section 1 media queries @ max-width=870px **/
+
+@media only screen and (max-width: 890px) {
+
+.subsection-1b h1 {
+  font-weight: 800;
+  margin: .5rem 0;
+  padding: 0 1rem;
+  font-size: 3rem;
+}
+
+.subsection-1b h3 {
+  margin: 0 0 .5rem 0;
+  padding: 0 .5rem;
+  font-size: 1.5rem;
+}
+
+}
+
+/** Section 1 media queries @ max-width=700px **/
 
 @media only screen and (max-width: 700px) {
   .section-1 {
@@ -523,11 +542,13 @@ footer {
 
   .subsection-1b h5 {
     color: white;
-    background-color: rgb(56,56,56);
+    background-color: rgb(110,110,110);
     margin: 0;
     padding: .5rem 6rem;
     font-size: 1.1rem;
     font-weight: 300;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+    border-radius: .3rem;
   }
 
 }
@@ -614,7 +635,7 @@ footer {
     justify-content: flex-start;
     align-items: center;
     height: auto;
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
   }
@@ -630,15 +651,16 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
+    width: 80%;
     height: auto;
     margin: .5rem 0;
     padding:0;
     background-color: rgb(220, 220, 220);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+    border-radius: .5rem;
   }
 
   .study-areas-m h3 {
-    width: 35rem;
     font-size: 1.6rem;
     font-weight: 600;
     margin: 0;
@@ -647,6 +669,8 @@ footer {
 
   div.expander {
     width: 15px;
+    margin: 0;
+    padding: 1rem 1rem 1.5rem 0;
   }
 
 }
